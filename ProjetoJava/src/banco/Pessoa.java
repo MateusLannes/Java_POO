@@ -1,4 +1,4 @@
-package ProjetoJava.src;
+package ProjetoJava.src.banco;
 
 /**
  *
