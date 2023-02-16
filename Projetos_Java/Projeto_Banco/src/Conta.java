@@ -1,8 +1,7 @@
 package Projetos_Java.Projeto_Banco.src;
 
 /**
- *
- * @author 20202bsi0110
+ * @author Mateus Lannes Cunha
  */
 public class Conta {
     String numero;
@@ -10,24 +9,22 @@ public class Conta {
     double saldo;
     double limite;
     
-    /**
-     * metodo para mostar o saldo disponivel
-     */
+   
+
+
     double disponivel() {
+        /* retorna o saldo disponivel */
         return this.saldo + this.limite;
     }
 
-    /**
-     * metodo para mostrar o nome do titular
-     */
+ 
     String NomeTitular(){
+        /* retorna o nome do titular da conta */
         return this.titular.nome;
     }
        
-    /**
-     * metodo para obter o extrato de uma conta
-     */
     void extrato(){
+        /* imprime o extrado de uma conta */
         System.out.println("*** EXTRATO DA CONTA ***");
         System.out.println("Conta: " + this.numero);
         System.out.println("Titular: " + NomeTitular());
@@ -36,20 +33,15 @@ public class Conta {
     
 
     
-    /**
-     * @param valor
-     * metodo para depositar um valor na Conta
-     */
+
     void depositar(double valor){
+        /* deposita um valor em uma conta */
         this.saldo += valor;
     }
     
-    /**
-     * 
-     * @param valor
-     * @return 
-     */
+
     boolean sacar (double valor) {
+        /* Realiza um Saque, verificando se é possível sacar */
         if (valor <= this.disponivel()){
             this.saldo -= valor;
             System.out.println("Saque na conta " + this.numero + " realizado "
