@@ -50,10 +50,11 @@ public class Banco {
         c2.limite = 200.0;
         
         //Executando o metodo que imprime o extrato
-        System.out.println("Saldo da conta " + c1.numero +", com o proprietario(" + c1.titular.nome + ") de: "+ c1.saldo);
-        
-        
-        System.out.println("Saldo da conta " + c2.numero + ", com o proprietario (" + c2.titular.nome + ") de: "  + c2.saldo);
+        //System.out.println("Saldo da conta " + c1.numero +", com o proprietario(" + c1.titular.nome + ") de: "+ c1.saldo);
+        c1.extrato();
+        c2.extrato();
+
+        //System.out.println("Saldo da conta " + c2.numero + ", com o proprietario (" + c2.titular.nome + ") de: "  + c2.saldo);
     }
     
 }

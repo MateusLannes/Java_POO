@@ -16,6 +16,13 @@ public class Conta {
     double disponivel() {
         return this.saldo + this.limite;
     }
+
+    /**
+     * metodo para mostrar o nome do titular
+     */
+    String NomeTitular(){
+        return this.titular.nome;
+    }
        
     /**
      * metodo para obter o extrato de uma conta
@@ -23,7 +30,7 @@ public class Conta {
     void extrato(){
         System.out.println("*** EXTRATO DA CONTA ***");
         System.out.println("Conta: " + this.numero);
-        System.out.println("Titular: " + this.titular.cpf);
+        System.out.println("Titular: " + NomeTitular());
         System.out.println("Saldo disponivel para saque " + this.disponivel());
     }
     
