@@ -41,30 +41,34 @@ public class Conta {
     }
     
 
-    void sacar (double valor) {
+    boolean sacar (double valor) {
         /* Realiza um Saque, verificando se é possível sacar */
         if (valor <= this.disponivel()){
             this.saldo -= valor;
             System.out.println("Saque na conta " + this.numero + " realizado "
                                 + "com sucesso.");  
             System.out.println("Novo saldo: " + this.saldo);  
+            return true;
         }
         else {
             System.out.println("ERRO: nao foi possivel sacar " + valor );
-            System.out.println("Valor disponivel para saque" + this.disponivel());           
+            System.out.println("Valor disponivel para saque" + this.disponivel());
+            return false;           
         }
     }
 
-    void transferir ( double valor, Conta destino){
+    boolean transferir ( double valor, Conta destino){
         if(valor <= this.disponivel()){
             this.sacar(valor);
             destino.depositar(valor);
-            System.out.println("Transferencia de " + valor + "realizado com sucesso.");
+            System.out.println("Transferencia de " + valor +  " realizado com sucesso.");
             System.out.println("Origem: " + this.numero + " - Destino: " + destino.numero); 
+            return true;
         }
         else {
             System.out.println("Erro: não foi possivel transferir " + valor);
             System.out.println("Valor disponivel para transferencia: " + this.disponivel());
+            return false;
         }
     }
 }
