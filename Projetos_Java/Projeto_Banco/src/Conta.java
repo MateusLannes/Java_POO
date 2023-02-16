@@ -1,6 +1,6 @@
 package Projetos_Java.Projeto_Banco.src;
 
-import javax.print.event.PrintJobListener;
+
 
 /**
  * @author Mateus Lannes Cunha
@@ -36,7 +36,7 @@ public class Conta {
     void depositar(double valor){
         /* deposita um valor em uma conta */
         this.saldo += valor;
-        System.out.println("Deposito de " + valor + "realizado com sucesso.");
+        System.out.println("Deposito de " + valor + " realizado com sucesso.");
         System.out.println("Novo saldo: " + this.saldo);
     }
     
@@ -52,6 +52,19 @@ public class Conta {
         else {
             System.out.println("ERRO: nao foi possivel sacar " + valor );
             System.out.println("Valor disponivel para saque" + this.disponivel());           
+        }
+    }
+
+    void transferir ( double valor, Conta destino){
+        if(valor <= this.disponivel()){
+            this.sacar(valor);
+            destino.depositar(valor);
+            System.out.println("Transferencia de " + valor + "realizado com sucesso.");
+            System.out.println("Origem: " + this.numero + " - Destino: " + destino.numero); 
+        }
+        else {
+            System.out.println("Erro: não foi possivel transferir " + valor);
+            System.out.println("Valor disponivel para transferencia: " + this.disponivel());
         }
     }
 }

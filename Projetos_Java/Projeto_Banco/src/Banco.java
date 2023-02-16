@@ -50,6 +50,9 @@ public class Banco {
         //System.out.println("Saldo da conta " + c1.numero +", com o proprietario(" + c1.titular.nome + ") de: "+ c1.saldo);
         c1.extrato();
         c2.extrato();
+        c1.sacar(150);
+        c1.transferir(100, c2);
+        c1.depositar(100);
 
         //System.out.println("Saldo da conta " + c2.numero + ", com o proprietario (" + c2.titular.nome + ") de: "  + c2.saldo);
     }
