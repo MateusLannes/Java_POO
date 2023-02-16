@@ -1,4 +1,4 @@
-package ProjetoJava.src.banco;
+package Projetos_Java.src.banco;
 
 public class Banco {
     
