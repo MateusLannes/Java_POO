@@ -71,4 +71,18 @@ public class Conta {
             return false;
         }
     }
+
+    boolean chequeEspecial ( double juros){
+        /* caso o saldo esteja negativo é aplicado juros no saldo */
+        if ( this.saldo < 0){ 
+            this.saldo = this.saldo + (this.saldo * (juros / 100));
+            return true;
+        }
+        else {
+            System.out.println(" Saldo positivo");
+            return false;
+        }
+
+    }
+    
 }

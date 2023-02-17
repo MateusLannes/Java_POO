@@ -11,9 +11,6 @@ public class Banco {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
-        
-      
         
         /* Cria um objeto da classe Pessoa */
         Pessoa p1 = new Pessoa();
@@ -54,6 +51,11 @@ public class Banco {
         c1.transferir(100, c2);
         c1.depositar(100);
         c1.transferir(200, c2);
+
+        for(int i = 1; i <= 30 ; i++){
+            c1.chequeEspecial(0.5);
+            System.out.println("Saldo apos " + i + " dia: " + c1.saldo);
+        }
 
         //System.out.println("Saldo da conta " + c2.numero + ", com o proprietario (" + c2.titular.nome + ") de: "  + c2.saldo);
     }
