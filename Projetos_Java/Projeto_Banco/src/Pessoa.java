@@ -10,6 +10,14 @@ public class Pessoa {
     char sexo;
     String cpf;
 
+    Pessoa(String n, int i, char s, String c){
+        this.nome = n;
+        this.idade = i;
+        this.sexo = s;
+        this.cpf = c;
+        System.out.println("Nova pessoa criada no sistema.");
+    }
+
     void aniversario(){
         /* adiciona um ano na idade da pessoa */
         this.idade = this.idade + 1;
