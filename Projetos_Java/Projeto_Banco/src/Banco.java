@@ -13,8 +13,11 @@ public class Banco {
     public static void main(String[] args) {
         
         /* Cria objetos da classe Pessoa */
-        Pessoa p1 = new Pessoa("Maria",18,'F',"123.456.789-00");
-        Pessoa p2 = new Pessoa("Joao",22,'M',"234.567.890-00");
+        Data dataNascimentoP1 = new Data(18, 12, 2020);
+        Pessoa p1 = new Pessoa("Maria",'F',"123.456.789-00" , dataNascimentoP1);
+        
+        Data dataNascimentoP2 = new Data(18, 12, 2020);
+        Pessoa p2 = new Pessoa("Joao",'M',"234.567.890-00", dataNascimentoP2);
             
 
         /* Criando um objeto da classe Conta 
@@ -31,6 +34,8 @@ public class Banco {
         c1.transferir(100, c2);
         c1.depositar(100);
         c1.transferir(200, c2);
+
+        
 
         for(int i = 1; i <= 120 ; i++){
             c1.chequeEspecial(0.5);
