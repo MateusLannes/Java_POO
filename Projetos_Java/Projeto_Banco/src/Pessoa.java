@@ -6,15 +6,15 @@ package Projetos_Java.Projeto_Banco.src;
 
 public class Pessoa {
     String nome;
-    int idade;
+    Data dtNasc;
     char sexo;
     String cpf;
 
-    Pessoa(String n, int i, char s, String c){
+    Pessoa(String n, char s, String c, Data d){
         this.nome = n;
-        this.idade = i;
         this.sexo = s;
         this.cpf = c;
+        this.dtNasc = d;
         System.out.println("Nova pessoa criada no sistema.");
     }
 
