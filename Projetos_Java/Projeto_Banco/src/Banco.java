@@ -35,7 +35,7 @@ public class Banco {
         c1.depositar(100);
         c1.transferir(200, c2);
 
-        
+        p2.dtNasc.imprimirData();
 
         for(int i = 1; i <= 120 ; i++){
             c1.chequeEspecial(0.5);
