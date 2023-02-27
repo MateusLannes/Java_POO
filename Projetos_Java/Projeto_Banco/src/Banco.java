@@ -36,7 +36,8 @@ public class Banco {
         c1.transferir(200, c2);
 
         p2.dtNasc.imprimirData();
-
+        p2.calcularIdade();
+      
         for(int i = 1; i <= 120 ; i++){
             c1.chequeEspecial(0.5);
             
