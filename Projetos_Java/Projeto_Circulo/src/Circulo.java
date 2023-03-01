@@ -20,5 +20,9 @@ public class Circulo{
     double GetRaio() {
         return this.raio;
     }
-    
+
+    public String GetCor() {
+        return this.cor;
+    }
+
 }
