@@ -33,4 +33,12 @@ public class Circulo{
         this.cor = c;
     }
 
+    public double calcularArea() {
+        return 3.14 * this.raio * this.raio;
+    }
+
+    public double calcularPerimetro() {
+        return 2 * 3.14 * this.raio;
+    }
+
 }
