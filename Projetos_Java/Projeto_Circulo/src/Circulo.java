@@ -17,12 +17,20 @@ public class Circulo{
         System.out.println("Racio e cor adicionado ao Circulo.");
     }
 
-    double GetRaio() {
+    public double GetRaio() {
         return this.raio;
+    }
+
+    public void SetRaio(double r) {
+        this.raio = r;
     }
 
     public String GetCor() {
         return this.cor;
+    }
+
+    public void SetCor(String c) {
+        this.cor = c;
     }
 
 }
