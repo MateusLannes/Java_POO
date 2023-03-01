@@ -16,5 +16,9 @@ public class Circulo{
         this.cor = c;
         System.out.println("Racio e cor adicionado ao Circulo.");
     }
+
+    double GetRaio() {
+        return this.raio;
+    }
     
 }
