@@ -5,21 +5,19 @@ package Projetos_Java.Projeto_Banco.src;
  * data    03/03/2023
  */
 
-public class ContaCorrente extends Conta {
-    double limite;
-
-    public ContaCorrente(String numero, Pessoa titular){
-        super(numero,titular);
+public class ContaPoupanca extends Conta {
+    
+    public ContaPoupanca(String numero, Pessoa titular){
+        super(numero, titular);
         this.numero = numero;
         this.titular = titular;
         this.saldo = 0;
-        this.limite = 200.0;
-        System.out.println("Nova Conta Corrente adicionada ao sistema.");
+        System.out.println("Nova conta Poupanca adicionada ao sistema.");
     }
 
     double disponivel() {
         /* retorna o saldo disponivel */
-        return this.saldo + this.limite;
+        return this.saldo;
     }
 
     void extrato(){
@@ -46,15 +44,7 @@ public class ContaCorrente extends Conta {
         }
     }
 
-    boolean chequeEspecial ( double juros){
-        /* caso o saldo esteja negativo é aplicado juros no saldo */
-        if ( this.saldo < 0){ 
-            this.saldo = this.saldo + (this.saldo * juros )/ 100;
-            return true;
-        }
-        else {
-            System.out.println(" Saldo positivo");
-            return false;
-        }
-    }
+    /* Falta o metodo rendimentos
+     * void redimentos (double juros)
+     */
 }

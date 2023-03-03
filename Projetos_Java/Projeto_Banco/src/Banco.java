@@ -28,8 +28,7 @@ public class Banco {
         Conta c2 = new Conta("2345-6",p2);
         
 
-  
-        c1.extrato();
+        /*        c1.extrato();
         c2.extrato();
 
         c1.sacar(150);
@@ -46,7 +45,7 @@ public class Banco {
             if (i%30 == 0){
                 System.out.println("Saldo apos " + i + " dias: " + c1.saldo);
             }
-        }      
+        } */     
     }
 }
 
