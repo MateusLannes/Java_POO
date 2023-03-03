@@ -2,33 +2,26 @@ package Projetos_Java.Projeto_Banco.src;
 
 /**
  * @author Mateus Lannes Cunha
- * data    22/02/2023
+ * data    03/03/2023
  */
 
-public class Conta {
-    String numero;
-    Pessoa titular;
-    double saldo;
+public class ContaCorrente extends Conta {
+    double limite;
 
-    public Conta(String numero, Pessoa titular){
+    public ContaCorrente(String numero, Pessoa titular){
+        super(numero,titular);
         this.numero = numero;
         this.titular = titular;
         this.saldo = 0;
-        System.out.println("Nova conta adicionada ao sistema.");
+        this.limite = 200.0;
+        System.out.println("Nova Conta Corrente adicionada ao sistema.");
     }
-
 
     double disponivel() {
         /* retorna o saldo disponivel */
-        return this.saldo;
+        return this.saldo + this.limite;
     }
 
- 
-    String NomeTitular(){
-        /* retorna o nome do titular da conta */
-        return this.titular.nome;
-    }
-       
     void extrato(){
         /* imprime o extrado de uma conta */
         System.out.println("*** EXTRATO DA CONTA ***");
@@ -36,17 +29,6 @@ public class Conta {
         System.out.println("Titular: " + NomeTitular());
         System.out.println("Saldo disponivel para saque " + this.disponivel());
     }
-    
-
-    
-
-    void depositar(double valor){
-        /* deposita um valor em uma conta */
-        this.saldo += valor;
-        System.out.println("Deposito de " + valor + " realizado com sucesso.");
-        System.out.println("Novo saldo: " + this.saldo);
-    }
-    
 
     boolean sacar (double valor) {
         /* Realiza um Saque, verificando se é possível sacar */
@@ -64,21 +46,6 @@ public class Conta {
         }
     }
 
-    boolean transferir ( double valor, Conta destino){
-        if(valor <= this.disponivel()){
-            this.sacar(valor);
-            destino.depositar(valor);
-            System.out.println("Transferencia de " + valor +  " realizado com sucesso.");
-            System.out.println("Origem: " + this.numero + " - Destino: " + destino.numero); 
-            return true;
-        }
-        else {
-            System.out.println("Erro: não foi possivel transferir " + valor);
-            System.out.println("Valor disponivel para transferencia: " + this.disponivel());
-            return false;
-        }
-    }
-
     boolean chequeEspecial ( double juros){
         /* caso o saldo esteja negativo é aplicado juros no saldo */
         if ( this.saldo < 0){ 
@@ -90,5 +57,4 @@ public class Conta {
             return false;
         }
     }
-    
 }
