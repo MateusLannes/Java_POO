@@ -9,6 +9,8 @@ public class Conta {
     String numero;
     Pessoa titular;
     double saldo;
+    Data criacao;
+    Gerente ger; // gerente da Conta
 
     public Conta(String numero, Pessoa titular){
         this.numero = numero;
