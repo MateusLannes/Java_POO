@@ -12,10 +12,12 @@ public class Conta {
     Data criacao;
     Gerente ger; // gerente da Conta
 
-    public Conta(String numero, Pessoa titular){
+    public Conta(String numero, Pessoa titular, Gerente gerent, Data criac){
         this.numero = numero;
         this.titular = titular;
         this.saldo = 0;
+        this.ger = gerent;
+        this.criacao = criac;
         System.out.println("Nova conta adicionada ao sistema.");
     }
 
