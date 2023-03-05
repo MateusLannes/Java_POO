@@ -13,4 +13,7 @@ public class Gerente extends Pessoa {
         this.matricula = mat;
         this.senha = senha;
     }
+
+    /* boolean validarAcesso(String s) */
+    
 }

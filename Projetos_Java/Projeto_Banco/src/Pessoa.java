@@ -11,7 +11,7 @@ public class Pessoa {
     Data dtNasc;
     char sexo;
     String cpf;
-    int idade;
+    
 
     Pessoa(String n, char s, String c, Data d){
         this.nome = n;
@@ -21,10 +21,6 @@ public class Pessoa {
         System.out.println("Nova pessoa criada no sistema.");
     }
 
-    /*void aniversario(){
-        /* adiciona um ano na idade da pessoa 
-        this.idade = this.idade + 1;
-    }*/
 
     void atribuiCPF( String c){
         /* Altera o valor do atributo CPF */
@@ -51,7 +47,6 @@ public class Pessoa {
             idade--;
         }
         
-        this.idade = idade;
         System.out.println("A Pessoa "+ nome + " tem " + idade +" anos");
     }
 
