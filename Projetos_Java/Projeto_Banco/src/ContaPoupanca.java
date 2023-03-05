@@ -9,7 +9,7 @@ public class ContaPoupanca extends Conta {
     
     public ContaPoupanca(String numero, Pessoa titular, Gerente gerent, Data criac){
         super(numero, titular, gerent, criac);
-        this.saldo = 0;
+
     
         System.out.println("Nova conta Poupanca adicionada ao sistema.");
     }
