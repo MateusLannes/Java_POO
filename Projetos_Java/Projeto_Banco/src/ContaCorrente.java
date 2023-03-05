@@ -8,10 +8,8 @@ package Projetos_Java.Projeto_Banco.src;
 public class ContaCorrente extends Conta {
     double limite;
 
-    public ContaCorrente(String numero, Pessoa titular){
-        super(numero,titular);
-        this.numero = numero;
-        this.titular = titular;
+    public ContaCorrente(String numero, Pessoa titular, Gerente gerent, Data criac){
+        super( numero, titular,  gerent,  criac);
         this.saldo = 0;
         this.limite = 200.0;
         System.out.println("Nova Conta Corrente adicionada ao sistema.");
