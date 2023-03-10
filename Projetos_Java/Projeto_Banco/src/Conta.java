@@ -12,6 +12,11 @@ public class Conta {
     Data criacao;
     Gerente ger; // gerente da Conta
 
+
+    Conta(Gerente g){
+        this.ger = g;
+    }
+    
     public Conta(String numero, Pessoa titular, Gerente gerent, Data criac){
         this.numero = numero;
         this.titular = titular;

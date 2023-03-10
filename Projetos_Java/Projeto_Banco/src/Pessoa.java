@@ -12,6 +12,9 @@ public class Pessoa {
     char sexo;
     String cpf;
     
+    Pessoa(){
+        
+    }
 
     Pessoa(String n, char s, String c, Data d){
         this.nome = n;
@@ -21,23 +24,13 @@ public class Pessoa {
         System.out.println("Nova pessoa criada no sistema.");
     }
 
+    int idade(Data hoje) {
+        // retorna a idade da pessoa
+        int diaAtual = hoje.dia;
+        int mesAtual = hoje.mes;
+        int anoAtual = hoje.ano;
 
-    void atribuiCPF( String c){
-        /* Altera o valor do atributo CPF */
-        this.cpf = c;
-    }
-
-    void getDataNascimento(){
-        /* retorna o valor da idade da pessoa */
-        System.out.println("A data e: " + this.dtNasc.dia + "/" + this.dtNasc.mes + "/" + this.dtNasc.ano);
-    }
-    void calcularIdade() {
-        Calendar hoje = Calendar.getInstance();
-        int diaAtual = hoje.get(Calendar.DAY_OF_MONTH);
-        int mesAtual = hoje.get(Calendar.MONTH) + 1;
-        int anoAtual = hoje.get(Calendar.YEAR);
-
-        int diaNasc = this.dtNasc. dia;
+        int diaNasc = this.dtNasc.dia;
         int mesNasc = this.dtNasc.mes;
         int anoNasc = this.dtNasc.ano;
 
@@ -48,6 +41,7 @@ public class Pessoa {
         }
         
         System.out.println("A Pessoa "+ nome + " tem " + idade +" anos");
+        return idade;
     }
 
 

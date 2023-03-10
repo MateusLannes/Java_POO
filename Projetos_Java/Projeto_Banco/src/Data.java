@@ -18,4 +18,11 @@ public class Data {
         /* imprime a data de nascimento de uma pessoa */
         System.out.println("A data e: " + this.dia + "/" + this.mes + "/" + this.ano);
     }
+
+    /* boolean maior(Data d2){}
+     * receber outra data d2 como parametro de
+     * verificar se a data
+     * this (do objeto atual) ́e maior que a data d2 
+     * (ou seja, se ela aconteceu apos a data d2)
+     */
 }

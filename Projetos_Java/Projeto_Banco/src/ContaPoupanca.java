@@ -45,5 +45,7 @@ public class ContaPoupanca extends Conta {
 
     /* Falta o metodo rendimentos
      * void redimentos (double juros)
+     * Poupanca recebe uma taxa de juros como parametro 
+     * e adiciona essa porcentagem ao saldo da poupanca
      */
 }
