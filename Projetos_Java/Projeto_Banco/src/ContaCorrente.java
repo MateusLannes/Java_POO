@@ -8,12 +8,24 @@ package Projetos_Java.Projeto_Banco.src;
 public class ContaCorrente extends Conta {
     double limite;
 
-    public ContaCorrente(String numero, Pessoa titular, Gerente gerent, Data criac){
+    ContaCorrente(String numero, Pessoa titular, Gerente gerent, Data criac){
         super( numero, titular,  gerent,  criac);
         this.limite = 200.0;
         System.out.println("Nova Conta Corrente adicionada ao sistema.");
     }
 
+    void alterarLimite(String pwd, double l){
+        /*
+        pwd é a senha do gerente
+        então o metodo precisa validar a senha antes de 
+        alterar o limite
+         */
+    }
+
+    void alterarLimite(){
+
+    }
+    
     double disponivel() {
         /* retorna o saldo disponivel */
         return this.saldo + this.limite;
@@ -23,22 +35,6 @@ public class ContaCorrente extends Conta {
         /* imprime o extrado de uma conta */
         System.out.println("*** EXTRATO DA CONTA CORRENTE ***");
         super.extrato();
-    }
-
-    boolean sacar (double valor) {
-        /* Realiza um Saque, verificando se é possível sacar */
-        if (valor <= this.disponivel()){
-            this.saldo -= valor;
-            System.out.println("Saque na conta " + this.numero + " realizado "
-                                + "com sucesso.");  
-            System.out.println("Novo saldo: " + this.saldo);  
-            return true;
-        }
-        else {
-            System.out.println("ERRO: nao foi possivel sacar " + valor );
-            System.out.println("Valor disponivel para saque" + this.disponivel());
-            return false;           
-        }
     }
 
     boolean chequeEspecial ( double juros){

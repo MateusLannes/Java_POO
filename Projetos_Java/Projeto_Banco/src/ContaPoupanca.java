@@ -14,32 +14,12 @@ public class ContaPoupanca extends Conta {
         System.out.println("Nova conta Poupanca adicionada ao sistema.");
     }
 
-    double disponivel() {
-        /* retorna o saldo disponivel */
-        return this.saldo;
-    }
-
     void extrato(){
         /* imprime o extrado de uma conta */
         System.out.println("*** EXTRATO DA CONTA POUPANÇA ***");
         super.extrato();
     }
 
-    boolean sacar (double valor) {
-        /* Realiza um Saque, verificando se é possível sacar */
-        if (valor <= this.disponivel()){
-            this.saldo -= valor;
-            System.out.println("Saque na conta " + this.numero + " realizado "
-                                + "com sucesso.");  
-            System.out.println("Novo saldo: " + this.saldo);  
-            return true;
-        }
-        else {
-            System.out.println("ERRO: nao foi possivel sacar " + valor );
-            System.out.println("Valor disponivel para saque" + this.disponivel());
-            return false;           
-        }
-    }
 
     /* Falta o metodo rendimentos
      * void redimentos (double juros)

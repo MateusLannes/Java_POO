@@ -1,5 +1,4 @@
 package Projetos_Java.Projeto_Banco.src;
-import java.util.Calendar;
 
 /**
  * @author Mateus Lannes Cunha
@@ -13,19 +12,19 @@ public class Pessoa {
     String cpf;
     
     Pessoa(){
-        
+
     }
 
     Pessoa(String n, char s, String c, Data d){
         this.nome = n;
         this.sexo = s;
         this.cpf = c;
-        this.dtNasc = d;
+        this.dtNasc = d;]
         System.out.println("Nova pessoa criada no sistema.");
     }
 
     int idade(Data hoje) {
-        // retorna a idade da pessoa
+        /* não retorna mais a idade da pessoa */
         int diaAtual = hoje.dia;
         int mesAtual = hoje.mes;
         int anoAtual = hoje.ano;
