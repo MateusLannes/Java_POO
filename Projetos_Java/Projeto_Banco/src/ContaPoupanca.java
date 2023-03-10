@@ -21,10 +21,8 @@ public class ContaPoupanca extends Conta {
 
     void extrato(){
         /* imprime o extrado de uma conta */
-        System.out.println("*** EXTRATO DA CONTA ***");
-        System.out.println("Conta: " + this.numero);
-        System.out.println("Titular: " + this.titular.nome);
-        System.out.println("Saldo disponivel para saque " + this.disponivel());
+        System.out.println("*** EXTRATO DA CONTA POUPANÇA ***");
+        super.extrato();
     }
 
     boolean sacar (double valor) {
