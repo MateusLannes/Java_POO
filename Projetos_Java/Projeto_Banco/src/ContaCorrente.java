@@ -15,6 +15,11 @@ public class ContaCorrente extends Conta {
     }
 
     void alterarLimite(String pwd, double l){
+        if(senhadigitada = pwd){
+            System.in();
+            System.out.println("Novo limite: " + this.limite)
+        }
+        
         /*
         pwd é a senha do gerente
         então o metodo precisa validar a senha antes de 
