@@ -64,6 +64,17 @@ public class Conta {
     }    
 
     boolean transferir(double valor, Conta destino){
-        /* tem q terminar o metodo*/
+        /* Transfere dinheiro para uma conta caso haja saldo disponivel (nao leva em conta o limite) */
+        if (this.disponivel() >= valor){
+            this.saldo = this.saldo - valor;
+            destino.saldo = valor;
+
+            System.out.println("A Conta: " + this.numero + "fez a transferencia de: " + valor + " e seu novo saldo" + this.disponivel());
+            System.out.println("Novo saldo da Conta destino: " + destino.numero + ": " + destino.disponivel());   
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
