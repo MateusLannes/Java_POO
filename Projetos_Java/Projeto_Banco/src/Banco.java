@@ -24,8 +24,8 @@ public class Banco {
 
         /* Criando um objeto da classe Conta 
         que pertence a Pessoa p1 e outro a Pessoa p2*/
-        Conta c1 = new Conta("1234-5",p1);
-        Conta c2 = new Conta("2345-6",p2);
+        //Conta c1 = new Conta("1234-5",p1);
+        //Conta c2 = new Conta("2345-6",p2);
         
 
         /*        c1.extrato();

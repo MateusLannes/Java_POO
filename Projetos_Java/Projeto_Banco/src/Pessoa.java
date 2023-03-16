@@ -19,7 +19,7 @@ public class Pessoa {
         this.nome = n;
         this.sexo = s;
         this.cpf = c;
-        this.dtNasc = d;]
+        this.dtNasc = d;
         System.out.println("Nova pessoa criada no sistema.");
     }
 
