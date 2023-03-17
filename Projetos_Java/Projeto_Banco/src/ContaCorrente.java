@@ -1,4 +1,5 @@
 package Projetos_Java.Projeto_Banco.src;
+import java.util.Scanner;
 
 /**
  * @author Mateus Lannes Cunha
@@ -15,16 +16,21 @@ public class ContaCorrente extends Conta {
     }
 
     void alterarLimite(String pwd, double l){
-        if(senhadigitada = pwd){
-            System.in();
-            System.out.println("Novo limite: " + this.limite)
-        }
-        
-        /*
-        pwd é a senha do gerente
-        então o metodo precisa validar a senha antes de 
-        alterar o limite
+        /* Recebe uma senha e verifica se esta senha é igual a senha
+         * do gerente dessa conta, caso a senha seja a mesma
          */
+        if(this.ger.validarAcesso(pwd)){
+            Scanner ler = new Scanner(System.in);
+            Double limite;
+
+            System.out.printf("Informe o novo limite: ");
+            this.limite = ler.nextDouble();
+            
+            System.out.println("Novo limite: " + this.limite);
+        }
+        else{
+            System.out.println("Senha incorreta!");
+        }
     }
 
     void alterarLimite(){
@@ -42,7 +48,7 @@ public class ContaCorrente extends Conta {
         super.extrato();
     }
 
-    boolean chequeEspecial ( double juros){
+    boolean chequeEspecial ( double juros ){
         /* caso o saldo esteja negativo é aplicado juros no saldo */
         if ( this.saldo < 0){ 
             this.saldo = this.saldo + (this.saldo * juros )/ 100;
