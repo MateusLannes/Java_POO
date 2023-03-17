@@ -6,14 +6,14 @@ package Projetos_Java.Projeto_Banco.src;
  */
 
 public class Conta {
-    String numero;
-    Pessoa titular;
-    double saldo;
-    Data criacao;
-    Gerente ger; // gerente da Conta
+    protected String numero;
+    protected Pessoa titular;
+    protected double saldo;
+    protected Data criacao;
+    protected Gerente ger; // gerente da Conta
 
 
-    Conta(Gerente g){
+    public Conta(Gerente g){
         this.ger = g;
     }
 
@@ -26,19 +26,19 @@ public class Conta {
         System.out.println("Nova conta adicionada ao sistema.");
     }
 
-    void depositar(double valor){
+    public void depositar(double valor){
         /* deposita um valor em uma conta */
         this.saldo += valor;
         System.out.println("Deposito de " + valor + " realizado com sucesso.");
         System.out.println("Novo saldo: " + this.saldo);
     }
 
-    double disponivel(){
+    protected double disponivel(){
         /* retorna o saldo disponivel */
         return saldo;
     }
 
-    boolean sacar (double valor) {
+    public boolean sacar (double valor) {
         /* Realiza um Saque, verificando se é possível sacar */
         if (valor <= this.disponivel()){
             this.saldo -= valor;
@@ -56,14 +56,14 @@ public class Conta {
 
 
     
-    void extrato(){
+    public void extrato(){
         /* imprime o extrado de uma conta */
         System.out.println("Conta: " + this.numero);
         System.out.println("Titular: " + this.titular.nome);
         System.out.println("Saldo disponivel para saque " + this.disponivel());
     }    
 
-    boolean transferir(double valor, Conta destino){
+    public boolean transferir(double valor, Conta destino){
         /* Transfere dinheiro para uma conta caso haja saldo disponivel (nao leva em conta o limite) */
         if (this.disponivel() >= valor){
             this.saldo = this.saldo - valor;

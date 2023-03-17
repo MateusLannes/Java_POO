@@ -6,7 +6,7 @@ package Projetos_Java.Projeto_Banco.src;
  */
 
 public class Data {
-    int dia, mes, ano;
+    private int dia, mes, ano;
 
     public Data (int d, int m, int a){
         this.dia = d;
@@ -14,12 +14,12 @@ public class Data {
         this.ano = a;
     }
 
-    void imprimirData(){
+    public void imprimirData(){
         /* imprime a data de nascimento de uma pessoa */
         System.out.println("A data e: " + this.dia + "/" + this.mes + "/" + this.ano);
     }
 
-    /* boolean maior(Data d2){}
+    /* public boolean maior(Data d2){}
      * receber outra data d2 como parametro de
      * verificar se a data
      * this (do objeto atual) ́e maior que a data d2 

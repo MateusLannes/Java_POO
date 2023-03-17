@@ -6,16 +6,16 @@ package Projetos_Java.Projeto_Banco.src;
  */
 
 public class Pessoa {
-    String nome;
-    Data dtNasc;
-    char sexo;
-    String cpf;
+    protected String nome;
+    protected Data dtNasc;
+    protected char sexo;
+    protected String cpf;
     
-    Pessoa(){
+    public Pessoa(){
 
     }
 
-    Pessoa(String n, char s, String c, Data d){
+    public Pessoa(String n, char s, String c, Data d){
         this.nome = n;
         this.sexo = s;
         this.cpf = c;
@@ -23,7 +23,7 @@ public class Pessoa {
         System.out.println("Nova pessoa criada no sistema.");
     }
 
-    int idade(Data hoje) {
+    public int idade(Data hoje) {
         /* não retorna mais a idade da pessoa */
         int diaAtual = hoje.dia;
         int mesAtual = hoje.mes;

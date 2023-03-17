@@ -14,14 +14,14 @@ public class ContaPoupanca extends Conta {
         System.out.println("Nova conta Poupanca adicionada ao sistema.");
     }
 
-    void extrato(){
+    public void extrato(){
         /* imprime o extrado de uma conta */
         System.out.println("*** EXTRATO DA CONTA POUPANÇA ***");
         super.extrato();
     }
 
-    void rendimentos (double juros){
-        
+    public void rendimentos (double juros){
+
         this.saldo = this.saldo + (this.saldo * juros )/ 100;
         System.out.println("Novo saldo: " + disponivel());
     }        

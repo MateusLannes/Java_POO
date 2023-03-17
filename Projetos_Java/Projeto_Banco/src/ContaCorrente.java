@@ -7,15 +7,15 @@ import java.util.Scanner;
  */
 
 public class ContaCorrente extends Conta {
-    double limite;
+    private double limite;
 
-    ContaCorrente(String numero, Pessoa titular, Gerente gerent, Data criac){
+    public ContaCorrente(String numero, Pessoa titular, Gerente gerent, Data criac){
         super( numero, titular,  gerent,  criac);
         this.limite = 200.0;
         System.out.println("Nova Conta Corrente adicionada ao sistema.");
     }
 
-    void alterarLimite(String pwd, double l){
+    public void alterarLimite(String pwd, double l){
         /* Recebe uma senha e verifica se esta senha é igual a senha
          * do gerente dessa conta, caso a senha seja a mesma
          */
@@ -33,22 +33,22 @@ public class ContaCorrente extends Conta {
         }
     }
 
-    void alterarLimite(){
-
+    public void alterarLimite(){
+        /* terminar */
     }
     
-    double disponivel() {
+    public double disponivel() {
         /* retorna o saldo disponivel */
         return this.saldo + this.limite;
     }
 
-    void extrato(){
+    public void extrato(){
         /* imprime o extrado de uma conta */
         System.out.println("*** EXTRATO DA CONTA CORRENTE ***");
         super.extrato();
     }
 
-    boolean chequeEspecial ( double juros ){
+    public boolean chequeEspecial ( double juros ){
         /* caso o saldo esteja negativo é aplicado juros no saldo */
         if ( this.saldo < 0){ 
             this.saldo = this.saldo + (this.saldo * juros )/ 100;

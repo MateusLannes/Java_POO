@@ -7,30 +7,30 @@ import java.util.Scanner;
  */
 
 public class Gerente extends Pessoa {
-    String matricula, senha;
+    private String matricula, senha;
     
-    Gerente(){
+    public Gerente(){
 
     }
 
-    Gerente(String n, char s, String c, Data d, String mat, String senha){
+    public Gerente(String n, char s, String c, Data d, String mat, String senha){
         super(n, s, c, d);
         this.matricula = mat;
         this.senha = senha;
     }
 
-    boolean validarAcesso(String s) {
+    public boolean validarAcesso(String s) {
         /* valida se a senha s é igual a senha do gerente */
         return s.equals(this.senha);
     }
 
-    boolean validarAcesso(){
+    public boolean validarAcesso(){
         /* Recebe uma senha pelo input e verifica se ela é a do gerente  */
         Scanner ler = new Scanner(System.in);
         String senha;
 
         System.out.printf("Informe a senha: ");
-        senha = ler.nextLine();
+        senha = ler.next();
         return (validarAcesso(senha));
     }
      
