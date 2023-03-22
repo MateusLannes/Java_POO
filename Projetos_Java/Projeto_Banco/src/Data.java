@@ -19,6 +19,22 @@ public class Data {
         System.out.println("A data e: " + this.dia + "/" + this.mes + "/" + this.ano);
     }
 
+    public int getDia() {
+        /* retorna o dia de nascimento */
+        return this.dia;
+    }
+
+    public int getMes() {
+        /* retorna o mes de nascimento */
+        return this.mes;
+    }
+
+    public int getAno() {
+        /* retorna o ano de nascimento */
+        return this.ano;
+    }
+
+    
     /* public boolean maior(Data d2){}
      * receber outra data d2 como parametro de
      * verificar se a data
