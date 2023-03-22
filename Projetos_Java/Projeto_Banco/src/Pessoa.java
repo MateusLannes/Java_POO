@@ -24,14 +24,14 @@ public class Pessoa {
     }
 
     public int idade(Data hoje) {
-        /* não retorna mais a idade da pessoa */
-        int diaAtual = hoje.dia;
-        int mesAtual = hoje.mes;
-        int anoAtual = hoje.ano;
+        /* retorna a idade da pessoa */
+        int diaAtual = hoje.getDia();
+        int mesAtual = hoje.getMes();
+        int anoAtual = hoje.getAno();
 
-        int diaNasc = this.dtNasc.dia;
-        int mesNasc = this.dtNasc.mes;
-        int anoNasc = this.dtNasc.ano;
+        int diaNasc = this.dtNasc.getDia();
+        int mesNasc = this.dtNasc.getMes();
+        int anoNasc = this.dtNasc.getAno();
 
         int idade = anoAtual - anoNasc;
 
