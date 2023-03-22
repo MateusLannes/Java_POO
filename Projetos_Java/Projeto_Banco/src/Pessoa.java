@@ -24,7 +24,7 @@ public class Pessoa {
     }
 
     public int idade(Data hoje) {
-        /* retorna a idade da pessoa */
+        /* compara duas idades e retorna a idade da pessoa */
         int diaAtual = hoje.getDia();
         int mesAtual = hoje.getMes();
         int anoAtual = hoje.getAno();

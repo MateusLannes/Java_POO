@@ -34,7 +34,23 @@ public class Data {
         return this.ano;
     }
 
-    
+    public boolean maior(Data d2) {
+         /* compara duas idades e retorna a idade da pessoa */
+         int diaAtual = d2.getDia();
+         int mesAtual = d2.getMes();
+         int anoAtual = d2.getAno();
+ 
+         int diaNasc = this.getDia();
+         int mesNasc = this.getMes();
+         int anoNasc = this.getAno();
+ 
+         int idade = anoAtual - anoNasc;
+ 
+        if (mesAtual < mesNasc || (mesAtual == mesNasc && diaAtual < diaNasc)) {
+             idade--;
+        }
+        return true;     
+    }
     /* public boolean maior(Data d2){}
      * receber outra data d2 como parametro de
      * verificar se a data

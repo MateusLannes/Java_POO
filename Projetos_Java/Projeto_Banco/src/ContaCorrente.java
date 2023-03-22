@@ -17,8 +17,8 @@ public class ContaCorrente extends Conta {
 
     public void alterarLimite(String pwd, double l){
         /* Recebe uma senha e verifica se esta senha é igual a senha
-         * do gerente dessa conta, caso a senha seja a mesma
-         */
+         * do gerente dessa conta, caso a senha seja a mesma */
+
         if(this.ger.validarAcesso(pwd)){
             Scanner ler = new Scanner(System.in);
             Double limite;
