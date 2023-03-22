@@ -37,7 +37,7 @@ public class ContaCorrente extends Conta {
         /* terminar */
     }
     
-    public double disponivel() {
+    protected double disponivel() {
         /* retorna o saldo disponivel */
         return this.saldo + this.limite;
     }
