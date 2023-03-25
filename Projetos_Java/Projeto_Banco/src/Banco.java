@@ -21,23 +21,6 @@ public class Banco {
         Data dataNascimentoP2 = new Data(18, 12, 2020);
         Pessoa p2 = new Pessoa("Joao",'M',"234.567.890-00", dataNascimentoP2);
             
-
-        /* Criando um objeto da classe Conta 
-        que pertence a Pessoa p1 e outro a Pessoa p2*/
-        //Conta c1 = new Conta("1234-5",p1);
-        //Conta c2 = new Conta("2345-6",p2);
-        
-
-        /*        c1.extrato();
-        c2.extrato();
-
-        c1.sacar(150);
-        c1.transferir(100, c2);
-        c1.depositar(100);
-        c1.transferir(200, c2);
-
-        p2.dtNasc.imprimirData();
-        p2.calcularIdade();
       
         for(int i = 1; i <= 120 ; i++){
             c1.chequeEspecial(0.5);
@@ -45,7 +28,7 @@ public class Banco {
             if (i%30 == 0){
                 System.out.println("Saldo apos " + i + " dias: " + c1.saldo);
             }
-        } */     
+        }      
     }
 }
 
