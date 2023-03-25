@@ -27,11 +27,10 @@ public class Gerente extends Pessoa {
     public boolean validarAcesso(){
         /* Recebe uma senha pelo input e verifica se ela é a do gerente  */
         Scanner ler = new Scanner(System.in);
-        String senha;
 
         System.out.printf("Informe a senha: ");
-        senha = ler.next();
-        return (validarAcesso(senha));
+       
+        return (validarAcesso(ler.next()));
     }
      
 }
