@@ -24,16 +24,41 @@ public class Banco {
         MenuGeral menuGeral = new MenuGeral();
         int opcao = 5;
         while(opcao != 0){
+            /* Imprime as opções do Menu Inicial */
             menuGeral.imprimeMenu();
             opcao = menuGeral.lerOpcao();
+
+            /* Verifica as opções e realiza a tarefa de acordo com a opcao selecionada */
             switch (opcao) {
                 case 1:
-                    // código para a opção 1
+                /* Imprime as opções do Menu de Cadastro */
+                    MenuCadastro menuCadastro = new MenuCadastro();
+                    menuCadastro.imprimeMenu();
+                    opcao = menuGeral.lerOpcao();
+
+                    /* Verifica as opções e realiza a tarefa de acordo com a opcao selecionada */
+                    switch (opcao){
+                        case 1:
+                            // Adicionar pessoa
+                            break;
+                        case 2:
+                            // Adicionar gerente
+                            break;
+                        case 3:
+                            // Criar conta corrente
+                            break;                        
+                        case 4:
+                            // criar poupança
+                            break;
+                        case 0:
+                            System.out.println("Saindo...");
+                            break;
+                    }
                     break;
+
                 case 2:
                     // código para a opção 2
                     break;
-                // adicione mais casos conforme necessário
                 case 0:
                     System.out.println("Saindo...");
                     break;
