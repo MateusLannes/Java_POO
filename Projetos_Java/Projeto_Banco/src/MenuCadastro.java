@@ -1,11 +1,16 @@
 package Projetos_Java.Projeto_Banco.src;
 
+/**
+ * @author Mateus Lannes Cunha
+ * data    25/03/2023
+ */
+
 public class MenuCadastro {
 
     
 
     public void imprimeMenu() {
-        /* imprime as opcoes do menu */
+        /* imprime as opcoes do menu do cadastro */
         System.out.println("Escolha uma das opcoes");
         System.out.println("a) Adicionar pessoa");
         System.out.println("b) Adicionar gerente");
