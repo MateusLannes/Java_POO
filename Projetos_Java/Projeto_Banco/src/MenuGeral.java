@@ -18,5 +18,4 @@ public class MenuGeral extends Menu{
             System.out.println("0) Sair");
             System.out.printf("Digite aqui: ");
         }
-    
 }

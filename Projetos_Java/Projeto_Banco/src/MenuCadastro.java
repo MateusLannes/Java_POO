@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class MenuCadastro extends Menu{
 
     
-
     public void imprimeMenu() {
         /* imprime as opcoes do menu do cadastro */
         System.out.println("Escolha uma das opcoes");
@@ -21,6 +20,4 @@ public class MenuCadastro extends Menu{
         System.out.println("0) Sair");
         System.out.printf("Digite aqui: ");
     }
-
-
 }
