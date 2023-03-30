@@ -7,7 +7,7 @@ import java.util.Scanner;
  * data    25/03/2023
  */
 
-public class MenuCadastro {
+public class MenuCadastro extends Menu{
 
     
 

@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 
 
-public class MenuGeral {
+public class MenuGeral extends Menu{
     
     public void imprimeMenu() {
             /* imprime as primeiras opcoes do menu */
@@ -19,9 +19,4 @@ public class MenuGeral {
             System.out.printf("Digite aqui: ");
         }
     
-        public int lerOpcao(){
-            /* le a opcao digitada e retorna ela */
-            Scanner ler = new Scanner(System.in); 
-            return ler.nextInt();        
-        }
 }
