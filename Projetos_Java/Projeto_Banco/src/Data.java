@@ -8,6 +8,10 @@ package Projetos_Java.Projeto_Banco.src;
 public class Data {
     private int dia, mes, ano;
 
+    public Data(){
+
+    }
+    
     public Data (int d, int m, int a){
         this.dia = d;
         this.mes = m;
