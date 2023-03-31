@@ -41,6 +41,7 @@ public class Conta {
     }
 
     public void depositar() {
+        /* ler o valor para depositar um valor em uma conta */
         System.out.println("Digite o valor para deposito");
         Scanner ler = new Scanner(System.in); 
         depositar(ler.nextDouble());
@@ -99,6 +100,7 @@ public class Conta {
     }
 
     public boolean transferir(Conta destino){
+        /* ler o valor para transferir um valor em uma conta */
         System.out.println("Digite o valor para transferencia");
         Scanner ler = new Scanner(System.in); 
         return (transferir(ler.nextDouble(),destino));
