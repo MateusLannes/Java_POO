@@ -1,5 +1,6 @@
 package Projetos_Java.Projeto_Banco.src;
 
+import java.util.ArrayList;
 
 /**
  * @author Mateus Lannes Cunha
@@ -12,6 +13,10 @@ public class Banco {
     /**
      * @param args the command line arguments
      */
+
+    public static int menu2(){
+
+    }
     public static void main(String[] args) {
         
         /* Cria objetos da classe Pessoa 
@@ -21,11 +26,29 @@ public class Banco {
         Data dataNascimentoP2 = new Data(18, 12, 2020);
         Pessoa p2 = new Pessoa("Joao",'M',"234.567.890-00", dataNascimentoP2);*/   
         
-        MenuGeral menuGeral = new MenuGeral();
+        listaPessoas [] arr = new listaPessoas[10];
+        ArrayList<Pessoa> listaPessoas = new ArrayList<>();
+        arr[0] = new listaPessoas();
+        listaPessoas.add
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //MenuGeral menuGeral = new MenuGeral();
         int opcao = 5;
         while(opcao != 0){
+
             /* Imprime as opções do Menu Inicial */
-            menuGeral.imprimeMenu();
+            MenuGeral.imprimeMenu();
             opcao = menuGeral.lerOpcao();
 
             /* Verifica as opções e realiza a tarefa de acordo com a opcao selecionada */

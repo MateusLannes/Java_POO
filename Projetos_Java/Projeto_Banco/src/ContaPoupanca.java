@@ -14,6 +14,12 @@ public class ContaPoupanca extends Conta {
         System.out.println("Nova conta Poupanca adicionada ao sistema.");
     }
 
+    public ContaPoupanca(Pessoa t, Gerente g){
+        super(t, g);
+        this.titular = t;
+        this.ger = g;
+    }
+
     public void extrato(){
         /* imprime o extrado de uma conta */
         System.out.println("*** EXTRATO DA CONTA POUPANÇA ***");
