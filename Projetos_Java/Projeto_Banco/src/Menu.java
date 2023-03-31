@@ -10,10 +10,43 @@ import java.util.Scanner;
 
 public class Menu {
     
-
     public static int lerOpcao(){
         /* le a opcao digitada e retorna ela */
         Scanner ler = new Scanner(System.in); 
-        return ler.nextInt();        
+        //ler.close();       
+        return ler.nextInt();      
+    } 
+
+    public static int imprimeMenuGeral() {
+        /* imprime as primeiras opcoes do menu */
+        System.out.println("Escolha uma das opcoes");
+        System.out.println("1) Cadastro");
+        System.out.println("2) Movimentacoes financeiras");
+        System.out.println("0) Sair");
+        System.out.printf("Digite aqui: ");
+        return lerOpcao();
+    }
+
+    public static int imprimeMenuCadastro() {
+        /* imprime as opcoes do menu do cadastro */
+        System.out.println("Escolha uma das opcoes");
+        System.out.println("1) Adicionar pessoa");
+        System.out.println("2) Adicionar gerente");
+        System.out.println("3) Criar conta corrente");
+        System.out.println("4) Criar poupanca");
+        System.out.println("0) Sair");
+        System.out.printf("Digite aqui: ");
+        return lerOpcao();
+    }
+
+    public static int imprimeMenuMovFinan() {
+        /* imprime as opcoes do menu Financeiro*/
+        System.out.println("Escolha uma das opcoes");
+        System.out.println("1) Cadastro");
+        System.out.println("2) Movimentacoes financeiras");
+        System.out.println("0) Sair");
+        System.out.printf("Digite aqui: ");
+        return lerOpcao();
     }
 }
+

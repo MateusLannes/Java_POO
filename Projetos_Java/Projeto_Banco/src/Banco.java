@@ -24,19 +24,12 @@ public class Banco {
         Pessoa p1 = new Pessoa("Maria",'F',"123.456.789-00" , dataNascimentoP1);
         
         Data dataNascimentoP2 = new Data(18, 12, 2020);
-        Pessoa p2 = new Pessoa("Joao",'M',"234.567.890-00", dataNascimentoP2);*/   
+        Pessoa p2 = new Pessoa("Joao",'M',"234.567.890-00", dataNascimentoP2); 
         
         listaPessoas [] arr = new listaPessoas[10];
         ArrayList<Pessoa> listaPessoas = new ArrayList<>();
         arr[0] = new listaPessoas();
-        listaPessoas.add
-
-
-
-
-
-
-
+        listaPessoas.add*/
 
 
 
@@ -48,16 +41,12 @@ public class Banco {
         while(opcao != 0){
 
             /* Imprime as opções do Menu Inicial */
-            MenuGeral.imprimeMenu();
-            opcao = menuGeral.lerOpcao();
+            Menu.imprimeMenuGeral();
 
             /* Verifica as opções e realiza a tarefa de acordo com a opcao selecionada */
             switch (opcao) {
                 case 1:
-                /* Imprime as opções do Menu de Cadastro */
-                    MenuCadastro menuCadastro = new MenuCadastro();
-                    menuCadastro.imprimeMenu();
-                    opcao = menuGeral.lerOpcao();
+                    Menu.imprimeMenuCadastro();
 
                     /* Verifica as opções e realiza a tarefa de acordo com a opcao selecionada */
                     switch (opcao){
@@ -80,7 +69,7 @@ public class Banco {
                     break;
 
                 case 2:
-                    // código para a opção 2
+                    Menu.imprimeMenuMovFinan();
                     break;
                 case 0:
                     System.out.println("Saindo...");
