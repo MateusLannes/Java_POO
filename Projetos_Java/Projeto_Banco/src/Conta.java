@@ -41,7 +41,9 @@ public class Conta {
     }
 
     public void depositar() {
-        
+        System.out.println("Digite o valor para deposito");
+        Scanner ler = new Scanner(System.in); 
+        depositar(ler.nextDouble());
     }
 
     protected double disponivel(){
@@ -94,5 +96,11 @@ public class Conta {
         else{
             return false;
         }
+    }
+
+    public boolean transferir(Conta destino){
+        System.out.println("Digite o valor para transferencia");
+        Scanner ler = new Scanner(System.in); 
+        return (transferir(ler.nextDouble(),destino));
     }
 }
