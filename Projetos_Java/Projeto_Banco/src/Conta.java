@@ -1,5 +1,7 @@
 package Projetos_Java.Projeto_Banco.src;
 
+import java.util.Scanner;
+
 /**
  * @author Mateus Lannes Cunha
  * data    22/02/2023
@@ -17,6 +19,11 @@ public class Conta {
         this.ger = g;
     }
 
+    public Conta ( Pessoa t, Gerente g){
+        this.titular = t;
+        this.ger = g;
+    }
+
     public Conta(String numero, Pessoa titular, Gerente gerent, Data criac){
         this.numero = numero;
         this.titular = titular;
@@ -31,6 +38,10 @@ public class Conta {
         this.saldo += valor;
         System.out.println("Deposito de " + valor + " realizado com sucesso.");
         System.out.println("Novo saldo: " + this.saldo);
+    }
+
+    public void depositar() {
+        
     }
 
     protected double disponivel(){
@@ -52,6 +63,13 @@ public class Conta {
             System.out.println("Valor disponivel para saque" + this.disponivel());
             return false;           
         }
+    }
+
+    public boolean sacar(){
+        /* o valor parar Saque e digitado dentro do metodo */
+        System.out.println("Digite o valor para saque");
+        Scanner ler = new Scanner(System.in); 
+        return sacar(ler.nextDouble()); 
     }
 
 
