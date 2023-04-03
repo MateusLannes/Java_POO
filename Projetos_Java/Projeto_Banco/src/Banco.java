@@ -32,9 +32,21 @@ public class Banco {
         listaPessoas.add*/
 
 
+        ArrayList<Pessoa> p = new ArrayList<>();
+        ArrayList<Gerente> g = new ArrayList<>();
+        ArrayList<Conta> c = new ArrayList<>();
 
+        int op = Menu.imprimeMenuGeral();
+        while(op != 0){
+            if (op == 1){
+                Menu.imprimeMenuCadastro();
+            }
+            if (op == 2){
+                Menu.imprimeMenuMovFinan();
+            }
 
-
+            op = Menu.imprimeMenuGeral();
+        }
 
         //MenuGeral menuGeral = new MenuGeral();
         int opcao = 5;
