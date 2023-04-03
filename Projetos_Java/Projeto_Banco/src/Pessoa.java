@@ -23,6 +23,14 @@ public class Pessoa {
         System.out.println("Nova pessoa criada no sistema.");
     }
 
+    public String getNome() {
+            return this.nome;
+    }
+
+    public String getCpf() {
+        return this.cpf;
+    }
+    
     public int idade(Data hoje) {
         /* compara duas idades e retorna a idade da pessoa */
         int diaAtual = hoje.getDia();

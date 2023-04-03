@@ -14,9 +14,6 @@ public class Banco {
      * @param args the command line arguments
      */
 
-    public static int menu2(){
-
-    }
     public static void main(String[] args) {
         
         /* Cria objetos da classe Pessoa 

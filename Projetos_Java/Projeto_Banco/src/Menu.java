@@ -11,6 +11,19 @@ import java.util.Scanner;
 
 public class Menu {
     
+    public static Pessoa escolherPessoa(ArrayList<Pessoa> p) {
+        Scanner s = new Scanner(System.in);
+        int i = 1;
+        System.out.println("Escolha o cliente da conta:");
+
+        for(Pessoa tit: p){
+            System.out.println( i + ") " + tit.getCpf() + " - " + tit.getNome());
+            i++;
+        }
+
+        int index = s.nextInt();
+        return p.get( index - 1);
+    }
     
     public static int lerOpcao(){
         /* le a opcao digitada e retorna ela */
