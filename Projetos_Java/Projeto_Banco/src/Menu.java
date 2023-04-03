@@ -1,5 +1,6 @@
 package Projetos_Java.Projeto_Banco.src;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Scanner;
 
 
 public class Menu {
-    int opcao;
+    
     
     public static int lerOpcao(){
         /* le a opcao digitada e retorna ela */
@@ -28,7 +29,7 @@ public class Menu {
         return lerOpcao();
     }
 
-    public static void imprimeMenuCadastro() {
+    public static void imprimeMenuCadastro(ArrayList<Pessoa> p, ArrayList<Gerente> g, ArrayList<Conta> c) {
         /* imprime as opcoes do menu do cadastro */
         System.out.println("Escolha uma das opcoes");
         System.out.println("1) Adicionar pessoa");
@@ -42,19 +43,16 @@ public class Menu {
 
         switch(opcao){
             case 1:
-                Data dataNascimentoP1 = new Data(18, 12, 2020);
-                Pessoa p1 = new Pessoa("Maria",'F',"123.456.789-00" , dataNascimentoP1);
+                p.add(new Pessoa());
             case 2:
-                //Novo Gerente
+                g.add(new Gerente());
             case 3:
-                //Nova Conta Corrente
+                // Nova Conta Corrente
             case 4:
                 //Nova Conta Poupança
             case 0:
-                //Sai
+                break;
         }
-
-        
     }
 
     public static int imprimeMenuMovFinan() {
