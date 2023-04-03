@@ -47,8 +47,13 @@ public class Menu {
             case 2:
                 g.add(new Gerente());
             case 3:
-                // Nova Conta Corrente
+                Pessoa tit = escolherPessoa(p);
+                Gerente ger = escolherGerente(g);
+                c.add ( new ContaCorrente(tit,ger));
             case 4:
+                Pessoa tit = escolherPessoa(p);
+                Gerente ger = escolherGerente(g);
+                c.add ( new ContaPoupanca(tit,ger));
                 //Nova Conta Poupança
             case 0:
                 break;
