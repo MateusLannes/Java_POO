@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 
 public class Menu {
+    int opcao;
     
     public static int lerOpcao(){
         /* le a opcao digitada e retorna ela */
@@ -27,7 +28,7 @@ public class Menu {
         return lerOpcao();
     }
 
-    public static int imprimeMenuCadastro() {
+    public static void imprimeMenuCadastro() {
         /* imprime as opcoes do menu do cadastro */
         System.out.println("Escolha uma das opcoes");
         System.out.println("1) Adicionar pessoa");
@@ -36,7 +37,24 @@ public class Menu {
         System.out.println("4) Criar poupanca");
         System.out.println("0) Sair");
         System.out.printf("Digite aqui: ");
-        return lerOpcao();
+        
+        int opcao = lerOpcao();
+
+        switch(opcao){
+            case 1:
+                Data dataNascimentoP1 = new Data(18, 12, 2020);
+                Pessoa p1 = new Pessoa("Maria",'F',"123.456.789-00" , dataNascimentoP1);
+            case 2:
+                //Novo Gerente
+            case 3:
+                //Nova Conta Corrente
+            case 4:
+                //Nova Conta Poupança
+            case 0:
+                //Sai
+        }
+
+        
     }
 
     public static int imprimeMenuMovFinan() {
