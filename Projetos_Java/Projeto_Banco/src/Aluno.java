@@ -2,7 +2,7 @@ package Projetos_Java.Projeto_Banco.src;
 
 /**
  * @author Mateus Lannes Cunha
- * data    03/03/2023
+ * data    03/03/2023.
  */
 
 public class Aluno extends Pessoa {
